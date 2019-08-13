@@ -82,6 +82,9 @@ h3 {
 p {
   font-size: 1.75em;
 }
+.page-wrapper {
+  padding: 4em 6em;
+}
 
 .header-wrapper {
   width: 50vw;
@@ -92,5 +95,8 @@ p {
   .header-wrapper {
     width: initial;
     padding: 4em 2em;
+  }
+  .page-wrapper {
+    padding: 4em 0em;
   }
 }
