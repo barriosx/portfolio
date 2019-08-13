@@ -1,0 +1,22 @@
+.nav {
+  padding: 0em 6em;
+  display: flex;
+}
+.nav > * {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5em;
+  transition: color 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.nav > *:hover {
+  color: #86C232;
+}
+.nav > *:not(:last-child) {
+  margin-right: 1.5em;
+}
+
+@media screen and (max-width: 767px) {
+  .nav {
+    padding: 0em 2em;
+  }
+}

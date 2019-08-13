@@ -87,3 +87,10 @@ p {
   width: 50vw;
   padding: 4em 6em;
 }
+
+@media screen and (max-width: 767px) {
+  .header-wrapper {
+    width: initial;
+    padding: 4em 2em;
+  }
+}
