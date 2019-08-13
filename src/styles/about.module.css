@@ -1,0 +1,16 @@
+.center {
+  width: 50%;
+  margin: auto;
+}
+.center h1 {
+  text-align: center;
+}
+ul {
+ margin: 3.5em 0em; 
+} 
+ul li {
+  font-size: 1.75em;
+}
+a {
+
+}
