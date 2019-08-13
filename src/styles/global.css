@@ -67,7 +67,9 @@
   content: "\e0a5";
 }
 /* ! Socicon Plugin  !*/
-
+html {
+  font-family: 'Red Hat Display', sans-serif;
+}
 h1 {
   font-size: 5em;
 }
@@ -78,6 +80,10 @@ h3 {
   font-size: 2.5em;
 }
 p {
-  font-size: 1.5em;
+  font-size: 1.75em;
 }
 
+.header-wrapper {
+  width: 50vw;
+  padding: 4em 6em;
+}

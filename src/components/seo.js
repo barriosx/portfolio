@@ -68,7 +68,7 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
       ].concat(meta)}
-    />
+    ><link href="https://fonts.googleapis.com/css?family=Red+Hat+Display&display=swap" rel="stylesheet"/></Helmet>
   )
 }
 

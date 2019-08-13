@@ -1,7 +1,7 @@
 a.email {
   text-decoration: none;
-  color: #6B6B6B;
-  font-size: 1.5em;
+  color: #a3a3a3;
+  font-size: 2em;
   font-weight: 600;
   letter-spacing: 2.5;
 }
@@ -10,11 +10,15 @@ ul.social {
   font-size: 2em;
   list-style: none;
   margin: 1.5rem auto;
-  justify-content: space-around;
+  padding: 0;
+  justify-content: flex-start;
+}
+ul.social li:not(:last-child) {
+  margin-right: 1.5em;
 }
 ul.social li a {
-  /* font-size: 1.4375rem; */
-  color: #6B6B6B;
+  font-size: 3.4375rem;
+  color: #a3a3a3;
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -22,4 +26,7 @@ ul.social li a:hover {
   border: none; 
   box-shadow: none;
   color: #86C232;
+}
+.text {
+  color: #a3a3a3;
 }
