@@ -5,7 +5,7 @@ import { graphql, useStaticQuery } from "gatsby"
 
 import header from "../styles/header.module.css"
 
-const Header = ({ siteTitle }) => {
+const Header = () => {
   const data = useStaticQuery(graphql`
   {
     file(extension: { eq: "pdf" } ) {
@@ -18,7 +18,8 @@ return (
     <Greeting />
     <h3 className={header.subHeader}>I'm a developer <span role="img" aria-label="developer">👨🏻‍💻</span> located in NYC <span role="img" aria-label="nyc">🗽</span>.</h3>
     <p className={header.text}>If you need an quick way to get to know me, <a className={header.resumeLink} href={data.file.publicURL} rel="noopener noreferrer" target="_blank">read my resume.</a></p>
-    <div className={header.emailWrapper}><a href="mailto:stevenbarrios03@gmail.com" className={header.email}>stevenbarrios03@gmail.com</a></div>
+    {/* <h3 className={header.subHeader}></h3> */}
+    {/* <div className={header.emailWrapper}><a href="mailto:stevenbarrios03@gmail.com" className={header.email}>stevenbarrios03@gmail.com</a></div> */}
     <ul className={header.social}>
       <li>
         <a href="https://www.linkedin.com/in/steven-elias-barrios/" className="pure-button button-socicon"><span className="socicon socicon-linkedin"></span></a>
@@ -31,6 +32,9 @@ return (
       </li>
       <li>
         <a href="https://www.instagram.com/_stevenbarrios/?hl=en" className="pure button button-socicon"><span className="socicon socicon-instagram"></span></a>
+      </li>
+      <li>
+        <a href="https://twitter.com/_stevenbarrios/" className="pure button button-socicon"><span className="socicon socicon-twitter"></span></a>
       </li>
     </ul>
   </>
