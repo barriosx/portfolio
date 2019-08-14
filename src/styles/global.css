@@ -82,12 +82,24 @@ h3 {
 p {
   font-size: 1.75em;
 }
+a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+a:hover {
+  color: #86C232;
+}
+.text {
+  color: #a3a3a3;
+}
 .page-wrapper {
   padding: 4em 6em;
 }
 
 .header-wrapper {
-  width: 50vw;
+  width: 60vw;
   padding: 4em 6em;
 }
 

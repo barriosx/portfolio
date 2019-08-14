@@ -17,9 +17,7 @@ return (
   <>
     <Greeting />
     <h3 className={header.subHeader}>I'm a developer <span role="img" aria-label="developer">👨🏻‍💻</span> located in NYC <span role="img" aria-label="nyc">🗽</span>.</h3>
-    <p className={header.text}>If you need an quick way to get to know me, <a className={header.resumeLink} href={data.file.publicURL} rel="noopener noreferrer" target="_blank">read my resume.</a></p>
-    {/* <h3 className={header.subHeader}></h3> */}
-    {/* <div className={header.emailWrapper}><a href="mailto:stevenbarrios03@gmail.com" className={header.email}>stevenbarrios03@gmail.com</a></div> */}
+    <p className="text">If you need an quick way to get to know me, <a className={header.resumeLink} href={data.file.publicURL} rel="noopener noreferrer" target="_blank">read my resume.</a></p>
     <ul className={header.social}>
       <li>
         <a href="https://www.linkedin.com/in/steven-elias-barrios/" className="pure-button button-socicon"><span className="socicon socicon-linkedin"></span></a>
