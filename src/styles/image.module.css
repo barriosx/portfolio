@@ -1,0 +1,10 @@
+.image {
+  height: 300px;
+  width: 300px;
+  margin: 0em auto 3em;
+}
+.image img {
+  border-radius: 50%;
+  box-shadow: 0em .25em 1em 0em rgba(42,42,42,0.3);
+
+}

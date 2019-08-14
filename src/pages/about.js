@@ -3,6 +3,7 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import about from "../styles/about.module.css"
+import AboutImage from "../components/about-img";
 
 
 const About = () => (
@@ -10,8 +11,9 @@ const About = () => (
     <SEO title="About" />
     <div className="page-wrapper">
       <div className={about.center}>
-        <h1>Hey there!</h1>
-        <p>I'm glad you want to get more familiar. Here's a quick overview of who I am:</p>
+        <AboutImage />
+        <h1>What's up!</h1>
+        <p>I'm glad you want to get more familiar! Here's a quick overview of who I am:</p>
         <ul>
           <li>
             I was born and currently live in NY, and am of Guatemalan and Salvadoran ethnicity <span role="img" aria-label="Guatemala">🇬🇹</span> <span role="img" aria-label="El Salvador">🇸🇻</span>

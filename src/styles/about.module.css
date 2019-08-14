@@ -4,13 +4,11 @@
 }
 .center h1 {
   text-align: center;
+  margin: 0.5em 0em;
 }
 ul {
  margin: 3.5em 0em; 
 } 
 ul li {
   font-size: 1.75em;
-}
-a {
-
 }
