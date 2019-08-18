@@ -12,6 +12,6 @@
   height: 100%;
 }
 
-.project-image img {
-  height: 500px;
+@media screen and (max-width: 767px) {
+    
 }

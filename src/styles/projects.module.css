@@ -36,7 +36,8 @@
   .project-card {
     position: absolute;
     left: 0%;
-    bottom: 11em;
+    bottom: -1em;
+    width: 100%;
   }
 }
 
