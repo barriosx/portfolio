@@ -1,0 +1,42 @@
+.projects > *:not(:last-child) {
+  margin-bottom: 24em;
+}
+.project {
+  position: relative;
+  height: 580px;
+  width: 75%;
+}
+.project-image {
+  position: absolute;
+  height: 75%;
+  width: 75%;
+  top: 0;
+  left:0;
+}
+.img {
+  height:100%;
+  width:100%;
+  object-fit: cover;
+  object-position: center center;
+}
+.project-card {
+  position: absolute;
+  width: calc(100% - 40%);
+  left: 40%;
+  bottom: 0%;
+}
+
+@media screen and (max-width: 767px) {
+  .project {
+    width: 100%;
+  }
+  .project-image {
+    width: 100%;
+  }
+  .project-card {
+    position: absolute;
+    left: 0%;
+    bottom: 11em;
+  }
+}
+

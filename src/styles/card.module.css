@@ -1,0 +1,21 @@
+.card {
+  background: #363738;
+  border-radius: 1.5em;
+  padding: 3em;
+  box-shadow: 0em 0.5em 1.5em 0.5em rgba(37,38,39, 0.4);
+}
+.card h2 {
+  margin-top: 0em;
+  margin-bottom: 0.25em;
+}
+.card .links {
+  display: flex;
+  margin-top: 3em;
+}
+.card .links > *:not(:first-child) {
+  margin-left: 1.5em;
+}
+
+@media screen and (max-width: 767px) {
+  
+}
