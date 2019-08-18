@@ -35,4 +35,11 @@ ul.social li a:hover {
   color: #86C232;
 }
 
-
+@media screen and (max-width: 767px) {
+  ul.social > * {
+    flex: 1;
+  }
+  ul.social li:not(:last-child) {
+    margin-right: 1em;
+  }
+}
