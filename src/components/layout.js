@@ -16,7 +16,7 @@ import layout from "../styles/layout.module.css"
 import {useSpring, animated} from "react-spring"
 
 const Layout = ({ children }) => {
-  const props = useSpring({opacity: 1, from: {opacity: 0}})
+  const props = useSpring({opacity: 1, from: {opacity: 0}, config: { tension:200, friction: 10}})
   return (
     <div className={layout.container}>
       <Navbar />

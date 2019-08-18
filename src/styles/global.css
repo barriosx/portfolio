@@ -97,12 +97,31 @@ a:hover {
 .page-wrapper {
   padding: 4em 6em;
 }
-
 .header-wrapper {
   width: 60vw;
   padding: 4em 6em;
 }
-
+.btn {
+  color: #fff;
+  letter-spacing: normal;
+  word-spacing: normal;
+  font-size: 1.5em;
+  border-radius: .25em;
+  padding: 1em 2em;
+  border: none;
+  text-align: center;
+  transition: background 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.btn:focus {
+  outline: none;
+}
+.btn-primary {
+  background:#86C232;
+}
+.btn-primary:hover {
+  background: rgb(102, 150, 35);
+  color: #fff !important;
+}
 @media screen and (max-width: 767px) {
   .header-wrapper {
     width: initial;

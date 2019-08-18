@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import about from "../styles/about.module.css"
 import AboutImage from "../components/about-img";
+import Socials from "../components/socials";
 
 
 const About = () => (
@@ -12,7 +13,7 @@ const About = () => (
     <div className="page-wrapper">
       <div className={about.center}>
         <AboutImage />
-        <h1>What's up!</h1>
+        <h1>Hey there!</h1>
         <p>I'm glad you want to get more familiar! Here's a quick overview of who I am:</p>
         <ul>
           <li>
@@ -25,8 +26,8 @@ const About = () => (
             I listen to EDM, Hip-Hop, and latin music <span role="img" aria-label="Headphones Emoji">🎧</span>
           </li>
         </ul>
-        <p>If that isn't the kind of information you're looking for, my resume might be a better option.</p>
         <p>If that isn't enough information, add me on my social media accounts!</p>
+        <Socials />
       </div>  
     </div>
   </Layout>

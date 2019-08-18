@@ -9,5 +9,9 @@
 
 }
 .project-image {
-  /* height: 500px; */
+  height: 100%;
+}
+
+.project-image img {
+  height: 500px;
 }

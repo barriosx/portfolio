@@ -16,7 +16,7 @@ ul.social {
   display: flex;
   font-size: 2em;
   list-style: none;
-  margin: 3rem auto;
+  margin: 3rem auto 0rem;
   padding: 0;
   justify-content: flex-start;
 }
