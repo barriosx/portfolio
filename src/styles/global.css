@@ -139,4 +139,14 @@ a:hover {
   .page-wrapper {
     padding: 4em 2em;
   }
+  .btn {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    color: #fff;
+    letter-spacing: normal;
+    word-spacing: normal;
+    font-size: 1.25em;
+    padding: 1.5em;
+  }
 }
