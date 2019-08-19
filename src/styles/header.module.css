@@ -38,6 +38,8 @@ ul.social li a:hover {
 @media screen and (max-width: 767px) {
   ul.social {
     justify-content: space-between;
+    margin: initial;
+    margin-top: 2em;
   }
 
   ul.social li:not(:last-child) {

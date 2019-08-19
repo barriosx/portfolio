@@ -12,3 +12,11 @@ ul {
 ul li {
   font-size: 1.75em;
 }
+
+@media screen and (max-width: 767px) {
+  .center {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }   
+}

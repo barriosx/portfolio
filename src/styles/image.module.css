@@ -13,5 +13,9 @@
 }
 
 @media screen and (max-width: 767px) {
-    
+  .image {
+    margin-top: 0.5em;
+    height: 250px;
+    width: 250px;
+  }
 }

@@ -19,4 +19,8 @@
   .nav {
     padding: 0em 2em;
   }
+  .nav > * {
+    font-size: 2em;
+    font-weight: 600;
+  }
 }
