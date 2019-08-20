@@ -1,11 +1,11 @@
 import React from "react"
-import header from "../styles/header.module.css"
+import footer from "../styles/footer.module.css"
 
 const Socials = () => {
 
 
   return (
-    <ul className={header.social}>
+    <ul className={footer.social}>
       <li>
         <a href="https://www.linkedin.com/in/steven-elias-barrios/" className="pure-button button-socicon"><span className="socicon socicon-linkedin"></span></a>
       </li>

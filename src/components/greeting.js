@@ -38,7 +38,7 @@ class Greeting extends Component {
   }
   render() { 
     return ( 
-      <h1 style={{marginBottom: '0.5em'}}>{this.state.timeofDay}, I'm Steven Barrios.</h1>
+      <h1>{this.state.timeofDay}, I'm Steven Barrios.</h1>
      );
   }
 }

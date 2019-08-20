@@ -6,11 +6,13 @@ import Card from "../components/card";
 import projects from "../styles/projects.module.css"
 import SmartchargeImage from "../components/smartcharge-img";
 import EzparknImage from "../components/ezparkn-img";
+import Navbar from "../components/navbar";
 
 const Projects = () => (
-  <Layout>
-    <SEO title="Projects" />
-    <div className="page-wrapper">
+  <>
+    <Navbar />
+    <Layout>
+      <SEO title="Projects" />
       <h1>Projects</h1>
       <div className={projects.projects}>
         <div className={projects.project}>
@@ -30,8 +32,8 @@ const Projects = () => (
           </div>
         </div>
       </div>
-    </div>
-  </Layout>
+    </Layout>
+  </>
 )
 
 export default Projects

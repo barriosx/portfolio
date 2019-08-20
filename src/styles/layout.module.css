@@ -1,14 +1,9 @@
-html {
-  height: 100%;
-  background: #252627; /*/ 1f2226 could be the navbar */
-  color: #fff;
-  font-size: 10px;
-}
-
-body {
-  margin: 0;
-}
-
 .container {
-  margin: 2em;
+  margin: 10rem 15rem;
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    margin: 4rem;
+  }
 }

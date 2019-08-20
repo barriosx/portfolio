@@ -1,27 +1,38 @@
 .nav {
-  padding: 0em 6em;
   display: flex;
-  position: fixed;
+  margin: 0rem 15rem;
+  /* position: fixed; */
 }
 .nav > * {
   color: #fff;
   text-decoration: none;
   font-size: 2em;
+  padding: 2rem 1rem;
+  letter-spacing: 2.5px;
   transition: color 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 .nav > *:hover {
   color: #86C232;
 }
+.nav > *:first-child {
+  padding: 2rem 1rem 2rem 0rem;
+}
+.nav > *:last-child {
+  padding: 2rem 0rem 2rem 1rem;
+  
+}
 .nav > *:not(:last-child) {
-  margin-right: 1.5em;
+  margin-right: 1rem;
 }
 
 @media screen and (max-width: 767px) {
   .nav {
-    padding: 0em 2em;
+    margin: 0rem 4rem;
+    justify-content: space-between;
+
   }
   .nav > * {
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: 600;
   }
 }

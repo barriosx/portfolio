@@ -10,18 +10,17 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-
-import Navbar from "./navbar"
 import layout from "../styles/layout.module.css"
 import {useSpring, animated} from "react-spring"
 
+
 const Layout = ({ children }) => {
   const props = useSpring({opacity: 1, from: {opacity: 0}, config: { tension:200, friction: 10}})
+
   return (
     <div className={layout.container}>
-      <Navbar />
       <animated.div style={props}>
-        <main>{children}</main>
+        {children}
       </animated.div>
     </div>
   )

@@ -5,15 +5,17 @@ import SEO from "../components/seo"
 import about from "../styles/about.module.css"
 import AboutImage from "../components/about-img";
 import Socials from "../components/socials";
+import Navbar from "../components/navbar";
 
 
 const About = () => (
-  <Layout>
-    <SEO title="About" />
-    <div className="page-wrapper">
+  <>
+    <Navbar />
+    <Layout>
+      <SEO title="About" />
       <div className={about.center}>
         <AboutImage />
-        <h1>Hey there!</h1>
+
         <p>I'm glad you want to get more familiar! Here's a quick overview of who I am:</p>
         <ul>
           <li>
@@ -29,8 +31,8 @@ const About = () => (
         <p>If that isn't enough information, add me on my social media accounts!</p>
         <Socials />
       </div>  
-    </div>
-  </Layout>
+    </Layout>  
+  </>
 )
 
 export default About
