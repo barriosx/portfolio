@@ -2,11 +2,12 @@ import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Card from "../components/card";
+import Card from "../components/card"
+import Footer from "../components/footer"
 import projects from "../styles/projects.module.css"
-import SmartchargeImage from "../components/smartcharge-img";
-import EzparknImage from "../components/ezparkn-img";
-import Navbar from "../components/navbar";
+import SmartchargeImage from "../components/smartcharge-img"
+import EzparknImage from "../components/ezparkn-img"
+import Navbar from "../components/navbar"
 
 const Projects = () => (
   <>
@@ -33,6 +34,8 @@ const Projects = () => (
         </div>
       </div>
     </Layout>
+    <Footer />
+
   </>
 )
 

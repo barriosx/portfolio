@@ -70,13 +70,14 @@
 html {
   height: 100%;
   font-family: 'Red Hat Display', sans-serif;
-  background: #222222; /*/ 252627 could be the navbar */ 
+  background: #191A1A; /*/ 252627 could be the navbar */ 
   color: #fff;
   font-size: 10px;
 }
 
 body {
   margin: 0;
+  height:100%;
 }
 h1 {
   font-size: 6rem;
@@ -94,12 +95,9 @@ p {
 }
 a {
   text-decoration: none;
-  color: #fff;
+  /* color: #fff; */
   font-weight: 500;
   transition: color 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-}
-a:hover {
-  color: #86C232;
 }
 .text {
   color: #a3a3a3;

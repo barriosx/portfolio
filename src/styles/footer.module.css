@@ -1,16 +1,29 @@
+.footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  background: #222222;
+  padding: 1.5rem 0rem;
+}
+.row {
+  display: flex;
+  margin: 0rem 15rem;
+  align-items: baseline;
+}
 ul.social {
   display: flex;
+  margin: 0rem;
   font-size: 2em;
   list-style: none;
-  margin: 3rem auto 0rem;
   padding: 0;
   justify-content: flex-start;
+  align-items: baseline;
 }
 ul.social li:not(:last-child) {
   margin-right: 1.5em;
 }
 ul.social li a {
-  font-size: 3.4375rem;
+  font-size: 3rem;
   color: #fff;
   text-decoration: none;
   transition: color 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
@@ -20,15 +33,28 @@ ul.social li a:hover {
   box-shadow: none;
   color: #86C232;
 }
-
+.signature {
+  margin: 0rem;
+  font-size: 2rem;
+  flex: 2;
+}
 @media screen and (max-width: 767px) {
+  .row {
+    flex-direction: column;
+    justify-content: center;
+    margin: 0rem 4rem;
+  }
   ul.social {
     justify-content: space-between;
-    margin: initial;
-    margin-top: 2em;
+    margin: 0rem;
+    width: 100%;
+  }
+  .signature {
+    font-size: 1.75rem;
+    margin: 1.5rem auto;
+  }
+  ul.social li:not(:last-child) {
+    margin-right: 0rem;
   }
 
-  ul.social li:not(:last-child) {
-    margin-right: initial;
-  }
 }

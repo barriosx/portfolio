@@ -1,8 +1,8 @@
 .card {
-  background: #363738;
+  background: #292a2b;
   border-radius: 1.5em;
   padding: 3em;
-  box-shadow: 0em 0.5em 1.5em 0.5em rgba(37,38,39, 0.4);
+  box-shadow: -0.25rem 0em 5rem 0.25rem rgba(32,32,32, 0.3);
 }
 .card h2 {
   margin-top: 0em;
