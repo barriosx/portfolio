@@ -4,39 +4,41 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Card from "../components/card"
 import Footer from "../components/footer"
-import projects from "../styles/projects.module.css"
-import SmartchargeImage from "../components/smartcharge-img"
-import EzparknImage from "../components/ezparkn-img"
 import Navbar from "../components/navbar"
+import projects from "../styles/projects.module.css"
+import projects_data from "../data/projects"
+import SmartchargeImage from "../components/smartcharge-img"
+// import EzparknImage from "../components/ezparkn-img"
 
-const Projects = () => (
-  <>
-    <Navbar />
-    <Layout>
-      <SEO title="Projects" />
-      <h1>Projects</h1>
+const Projects = () => {
+  const projects_ = projects_data.map((project,index) =>{
+    return (
       <div className={projects.projects}>
         <div className={projects.project}>
           <div className={projects.projectImage}>
+            {/* TODO: Find a way to interpolate the img path so that the img renders for each project. */}
             <SmartchargeImage />
           </div>
           <div className={projects.projectCard}>
-            <Card title="SmartCharge Plus" description="Gain a better understanding of how much charging an EV can cost." github="https://github.com/barriosx/smartcharge-plus" demo="https://smartcharge-plus.herokuapp.com/" />
-          </div>
-        </div>
-        <div className={projects.project}>
-          <div className={projects.projectImage}>
-            <EzparknImage />
-          </div>
-          <div className={projects.projectCard}>
-            <Card title="EZParkn" description="A parking reservation service for college students." github="https://github.com/CSC59939/EZPARKN" demo="https://ezparkn-ccny.herokuapp.com/" />
+            <Card title={project.name} description={project.description} github={project.github_url} demo={project.live_url} />
           </div>
         </div>
       </div>
-    </Layout>
-    <Footer />
-
-  </>
-)
+    )
+  });
+  return (
+    <>
+      <Navbar />
+      <Layout>
+        <SEO title="Projects" />
+        <h1>Projects</h1>
+        {
+          projects_
+        }
+      </Layout>
+      <Footer />
+    </>
+  );
+}
 
 export default Projects
