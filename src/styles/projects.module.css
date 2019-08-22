@@ -1,10 +1,11 @@
 .projects > *:not(:last-child) {
-  margin-bottom: 24em;
+  /* margin-bottom: 15rem; */
 }
 .project {
   position: relative;
   height: 580px;
   width: 75%;
+  margin-bottom: 15rem;
 }
 .project-image {
   position: absolute;
@@ -29,6 +30,7 @@
 @media screen and (max-width: 767px) {
   .project {
     width: 100%;
+    margin-bottom: 5rem;
   }
   .project-image {
     width: 100%;
