@@ -5,9 +5,10 @@ import SEO from "../components/seo"
 import Card from "../components/card"
 import Footer from "../components/footer"
 import Navbar from "../components/navbar"
+import Image from "../components/image"
 import projects from "../styles/projects.module.css"
 import projects_data from "../data/projects"
-import SmartchargeImage from "../components/smartcharge-img"
+// import SmartchargeImage from "../components/smartcharge-img"
 // import EzparknImage from "../components/ezparkn-img"
 
 const Projects = () => {
@@ -17,7 +18,8 @@ const Projects = () => {
         <div className={projects.project}>
           <div className={projects.projectImage}>
             {/* TODO: Find a way to interpolate the img path so that the img renders for each project. */}
-            <SmartchargeImage />
+            {/* kinda works? */}
+            <Image imgPath={project.image_urls.main} />
           </div>
           <div className={projects.projectCard}>
             <Card title={project.name} description={project.description} github={project.github_url} demo={project.live_url} />
