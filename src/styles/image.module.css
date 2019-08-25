@@ -11,7 +11,11 @@
 .project-image {
   height: 100%;
 }
-
+.carousel {
+  height: 425px;
+  width: 100%;
+  
+}
 @media screen and (max-width: 767px) {
   .image {
     margin-top: 0.5em;
