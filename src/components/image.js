@@ -43,10 +43,10 @@ const Image = ({imgPath}) => {
       }
     }
   `)
-  if(url == "ezparkn.png") {
+  if(url === "ezparkn.png") {
     return <Img fluid={data.ezparknImg.childImageSharp.fluid} className={image.projectImage} />
   }
-  else if(url == "smartcharge-plus.png") {
+  else if(url === "smartcharge-plus.png") {
     return <Img fluid={data.smartchargeImg.childImageSharp.fluid} className={image.projectImage} />
   }
   else {
