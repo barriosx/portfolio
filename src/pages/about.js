@@ -3,7 +3,6 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import about from "../styles/about.module.css"
-import AboutImage from "../components/about-img";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import Carousel from "../components/carousel";
@@ -15,7 +14,6 @@ const About = () => (
     <Layout>
       <SEO title="About" />
       <div className={about.center}>
-        {/* <AboutImage /> */}
         <Carousel />
         <h1>Hey!</h1>
         <p>I'm glad you want to get more familiar! Here's a quick overview of who I am:</p>

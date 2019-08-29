@@ -14,7 +14,7 @@ import projects_data from "../data/projects"
 const Projects = () => {
   const projects_ = projects_data.map((project,index) =>{
     return (
-      <div className={projects.projects}>
+      <div key={index} className={projects.projects}>
         <div className={projects.project}>
           <div className={projects.projectImage}>
             {/* TODO: Find a way to interpolate the img path so that the img renders for each project. */}

@@ -1,8 +1,12 @@
 .carousel {
-  /* background-color: blueviolet; */
   position: relative;
   height: 425px;
   width:100%;
+}
+.carousel-image {
+  position: absolute;
+  height: 425px;
+  width: 100%;
 }
 .indicators {
   position: absolute;
@@ -16,26 +20,42 @@
   justify-content: center;
   padding-left: 0;
   margin: 5% 15%;
-  
   list-style: none;
 }
-.indicator {
+.indicator, .indicator-selected {
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 50%;
   cursor: pointer;
-  background-color: rgba(255,255,255,0.75);
+  background-color: rgba(255,255,255,0.5);
 }
-.indicator:hover {
-  /* background-color:  */
+.indicator-selected {
+  background-color: rgba(255,255,255,0.9);
 }
-.indicators .indicator:not(:last-child) {
+.indicators > *:not(:last-child) {
   margin-right: 1.5rem;
 }
 .caption {
   position: absolute;
-  background-image: linear-gradient(to top, rgba(25,25,26, 0.85), rgba(0,0,0, 0));
+  background-image: linear-gradient(to top, rgba(11,11,11, 0.85), rgba(0,0,0, 0));
   bottom: 0;
   left: 0;
   right: 0;
+  padding: 1.5rem;
+}
+@media screen and (max-width: 767px) {
+  .carousel {
+    height: 300px;
+  }
+  .carousel-image {
+    position: absolute;
+    left: -4rem;
+    height: 300px;
+    width: 100vw;
+  }
+  .caption {
+    left: -4rem;
+    right: -4rem;
+    bottom: -0.75px;
+  }
 }
