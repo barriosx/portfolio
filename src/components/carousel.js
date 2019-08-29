@@ -19,32 +19,28 @@ const Carousel = () => {
       conedison: file(relativePath: { eq: "coned.jpeg" }) {
         childImageSharp {
           fluid(quality: 100) {
-            ...GatsbyImageSharpFluid,
-            src
+            ...GatsbyImageSharpFluid
           }
         }
       }
       conedison2: file(relativePath: {eq: "coned2.jpg"}) {
         childImageSharp {
           fluid(quality: 100) {
-            ...GatsbyImageSharpFluid,
-            src
+            ...GatsbyImageSharpFluid
           }
         }
       }
       summertech: file(relativePath: { eq: "summertech.jpg" }) {
         childImageSharp {
           fluid(quality: 100) {
-            ...GatsbyImageSharpFluid,
-            src
+            ...GatsbyImageSharpFluid
           }
         }
       }
       mta: file(relativePath: { eq: "mta.jpg"}) {
         childImageSharp {
           fluid(quality: 100) {
-            ...GatsbyImageSharpFluid,
-            src
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -55,7 +51,7 @@ const Carousel = () => {
 
   // Each image fetched will be placed as an array item where each item is a JSX element
   const imagesArray = Object.keys(data).map((img, index) => {
-    return ({style}) => <animated.div style={style}><img src={data[img].childImageSharp.fluid.src} className={carousel.carouselImage} /></animated.div>
+    return ({style}) => <animated.div style={style}><Img fluid={data[img].childImageSharp.fluid} className={carousel.carouselImage} /></animated.div>
   })
   
   // Need an effect hook to set interval function that changes the photo state from 0->3
