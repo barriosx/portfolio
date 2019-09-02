@@ -58,3 +58,19 @@ ul.social li a:hover {
   }
 
 }
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .row {
+    flex-direction: column;
+    justify-content: center;
+    margin: 0rem 15rem;
+  }
+  ul.social {
+    justify-content: space-between;
+    margin: 0rem;
+    width: 100%;
+  }
+  .signature {
+    margin: 1.5rem auto;
+  }
+}

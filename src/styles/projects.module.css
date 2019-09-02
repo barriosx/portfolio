@@ -43,3 +43,18 @@
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .project {
+    width: 100%;
+    margin-bottom: 5rem;
+  }
+  .project-image {
+    width: 100%;
+  }
+  .project-card {
+    position: absolute;
+    left: 0%;
+    bottom: -1em;
+    width: 100%;
+  }
+}

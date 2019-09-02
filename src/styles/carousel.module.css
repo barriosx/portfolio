@@ -54,14 +54,36 @@
     left: -4rem;
     height: 300px;
     width: 100vw;
-    object-fit: cover;
-    object-position: center center;
-    opacity: 1;
-    transition: none 0s ease 0s;
+    /* object-fit: cover;
+    object-position: center center; */
   }
   .caption {
     left: -4rem;
     right: -4rem;
+    padding: 1.5rem 4rem; 
     bottom: -0.75px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .carousel {
+    height: 300px;
+  }
+  .carousel-image {
+    position: absolute;
+    left: -15rem;
+    height: 300px;
+    width: 100vw;
+  }
+  .carousel-image img {
+    /* object-fit: cover; */
+    object-position: 0px -20rem !important;
+  }
+  .caption {
+    left: -15rem;
+    right: -15rem;
+    bottom: -0.69px;
+    padding: 1.5rem 15rem; 
+
   }
 }

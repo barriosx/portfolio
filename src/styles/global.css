@@ -130,11 +130,11 @@ a {
   background: rgb(102, 150, 35);
   color: #fff !important;
 }
-.err-404 {
+.link {
   color: #fff;
   display: inline-block;
 }
-.err-404::after {
+.link::after {
   display: block;
   content: "";
   height: 0.5rem;
@@ -145,7 +145,7 @@ a {
   transition: transform 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 
 }
-.err-404:hover {
+.link:hover {
   color: #86C232;
 }
 @media screen and (max-width: 767px) {

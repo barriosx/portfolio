@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useLayoutEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import images from "../data/images"
@@ -6,64 +6,44 @@ import carousel from "../styles/carousel.module.css"
 import { useTransition, animated, config } from "react-spring"
 
 const Carousel = () => {
+  // Need to set up a state hook to keep track of what photo needs to be rendered and to keep track of which caption to show
+  const [photo, setPhoto] = useState(0)
+
   // Need to fetch all the photos to be rendered inside the carousel
-  const data = useStaticQuery(graphql`
+  // Using object deconstruction unpack the result object into the variable "allFile"
+  const { allFile } = useStaticQuery(graphql`
     query {
-      portrait: file(relativePath: { eq: "portrait.jpg" }) {
-        childImageSharp {
-          fluid(quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      conedison: file(relativePath: { eq: "coned.jpeg" }) {
-        childImageSharp {
-          fluid(quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      conedison2: file(relativePath: {eq: "coned2.jpg"}) {
-        childImageSharp {
-          fluid(quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      summertech: file(relativePath: { eq: "summertech.jpg" }) {
-        childImageSharp {
-          fluid(quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      mta: file(relativePath: { eq: "mta.jpg"}) {
-        childImageSharp {
-          fluid(quality: 100) {
-            ...GatsbyImageSharpFluid
+      allFile(sort: { fields: name, order: ASC }, filter: { relativeDirectory: { eq: "carousel" } }) {
+        edges {
+          node {
+            id
+            name
+            childImageSharp {
+              fluid(quality: 100) {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
           }
         }
       }
     }
   `)
-  // Need to set up a state hook to keep track of what photo needs to be rendered and to keep track of which caption to show
-  const [photo, setPhoto] = useState(0)
 
   // Each image fetched will be placed as an array item where each item is a JSX element
-  const imagesArray = Object.keys(data).map((img, index) => {
-    return ({style}) => <animated.div style={style}><Img fluid={data[img].childImageSharp.fluid} className={carousel.carouselImage} /></animated.div>
+  const photosArray = allFile.edges.map((edge,index) => {
+    return { id: edge.node.id, img: edge.node.childImageSharp }
   })
-  
-  // Need an effect hook to set interval function that changes the photo state from 0->3
-  useEffect(() => void setInterval(() => setPhoto(stateValue => (stateValue + 1) % 5), 6000), [])
- 
+
   // Need to set up useTransition 
-  const transitions = useTransition(photo, p=>p, {
+  const transitions = useTransition(photosArray[photo], img => img.id, {
     from: { opacity: 0, position: 'absolute', width: '100%', height: '100%' },
     enter: { opacity: 1, position: 'absolute', width: '100%', height: '100%'},
     leave: { opacity: 0, position: 'absolute', width: '100%', height: '100%'},
-    config: config.stiff,
+    config: config.slow,
   })
+
+  // Need an effect hook to set interval function that changes the photo state from 0->4
+  useLayoutEffect(() => void setInterval(() => setPhoto(stateValue => (stateValue + 1) % 5), 6000), [])
 
   let photoCaption = (
     <div className={carousel.caption}>
@@ -77,8 +57,9 @@ const Carousel = () => {
     <div className={carousel.carousel}>
       {
         transitions.map(({item, props, key}) => {
-          const Photo = imagesArray[item]
-          return <Photo key={key} style={props} />
+          // const Photo = photosArray[item]
+          // <Photo key={key} style={props} />
+          return <animated.div key={key} style={props}><Img key={key} fluid={item.img.fluid} className={carousel.carouselImage} /></animated.div>
         })
       }
       {photoCaption}
