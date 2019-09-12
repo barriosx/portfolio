@@ -13,6 +13,18 @@ export default [
 		theme_color: '#003e89',
   },
   {
+    name: "CapiCount",
+    description: "Score tracker for double-six dominoes",
+		github_url: 'https://github.com/barriosx/dominoes-counter',
+		image_urls: {
+			main: "capicount.png",
+			screenshots: [],
+    },
+    live_url: 'https://capicount.netlify.com/',    
+    technologies: ['React'],    
+		theme_color: 'rgba(27, 109, 233, 0.8)',
+  },
+  {
     name: "EZParkn",
     description: "A parking reservation service for CUNY City College students.",
 		github_url: 'https://github.com/CSC59939/EZPARKN',

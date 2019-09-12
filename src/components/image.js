@@ -41,6 +41,13 @@ const Image = ({imgPath}) => {
           }
         }
       }
+      dominoImg: file(relativePath: { eq: "capicount.png" }) {
+        childImageSharp {
+          fluid(quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
   if(url === "ezparkn.png") {
@@ -48,6 +55,9 @@ const Image = ({imgPath}) => {
   }
   else if(url === "smartcharge-plus.png") {
     return <Img fluid={data.smartchargeImg.childImageSharp.fluid} className={image.projectImage} />
+  }
+  else if(url === "capicount.png") {
+    return <Img fluid={data.dominoImg.childImageSharp.fluid} className={image.projectImage} />
   }
   else {
     return <Img fluid={data.ehosImg.childImageSharp.fluid} className={image.projectImage} />
