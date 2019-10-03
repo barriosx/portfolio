@@ -109,6 +109,16 @@ a {
   width: 60vw;
   padding: 4em 6em;
 }
+.badge {
+  background-color: #50741e;
+  color: #fff;
+  padding: 0.5em 1.5em;
+  font-size: 11px;
+  line-height: 1;
+  text-shadow: none;
+  font-weight: 500;
+  border-radius: .25em;
+}
 .btn {
   color: #fff;
   letter-spacing: normal;
@@ -174,6 +184,14 @@ a {
     word-spacing: normal;
     font-size: 1.25em;
     padding: 1.5em;
+  }
+  .badge {
+    padding: 0.5em;
+    font-size: 10px;
+    line-height: 1;
+    text-shadow: none;
+    font-weight: 500;
+    border-radius: .25em;
   }
 }
 

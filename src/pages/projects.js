@@ -22,7 +22,7 @@ const Projects = () => {
             <Image imgPath={project.image_urls.main} />
           </div>
           <div className={projects.projectCard}>
-            <Card title={project.name} description={project.description} github={project.github_url} demo={project.live_url} />
+            <Card title={project.name} description={project.description} github={project.github_url} demo={project.live_url} tech={project.technologies} />
           </div>
         </div>
       </div>
