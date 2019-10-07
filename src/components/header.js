@@ -8,7 +8,7 @@ import header from "../styles/header.module.css"
 const Header = () => {
   const data = useStaticQuery(graphql`
   {
-    file(extension: { eq: "pdf" } ) {
+    file(relativePath: { eq: "steven_barrios_gold_resume.pdf" } ) {
       publicURL
     }
   }
