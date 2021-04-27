@@ -22,7 +22,7 @@ const About = () => (
             I am currently a <b>Front End Engineer</b> at <a className="link" href="https://www.coned.com/en">Con Edison</a>.
           </li>
           <li>
-            I work on feature development using Angular 10 and .NET to build UIs and interactions that meet my user's needs.
+            I work on feature development using Angular 10 and .NET to build PWAs whose interface and interactions meet my user's needs.
           </li>
           <li>
             I was born and raised in New York, and I am of Guatemalan and Salvadoran ethnicity <span role="img" aria-label="Guatemala">🇬🇹</span> <span role="img" aria-label="El Salvador">🇸🇻</span>
