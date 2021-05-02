@@ -10,7 +10,7 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import layout from "../styles/layout.module.css"
+import * as layout from "../styles/layout.module.css"
 import {useSpring, animated} from "react-spring"
 
 

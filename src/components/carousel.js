@@ -2,7 +2,7 @@ import React, { useState, useLayoutEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import images from "../data/images"
-import carousel from "../styles/carousel.module.css"
+import * as carousel from "../styles/carousel.module.css"
 import { useTransition, animated, config } from "react-spring"
 
 const Carousel = () => {
@@ -42,8 +42,8 @@ const Carousel = () => {
     config: config.slow,
   })
 
-  // Need an effect hook to set interval function that changes the photo state from 0->4
-  useLayoutEffect(() => void setInterval(() => setPhoto(stateValue => (stateValue + 1) % 5), 6000), [])
+  // Need an effect hook to set interval function that changes the photo state from 0->length of photosArray
+  useLayoutEffect(() => void setInterval(() => setPhoto(stateValue => (stateValue + 1) % photosArray.length), 10000), [])
 
   let photoCaption = (
     <div className={carousel.caption}>

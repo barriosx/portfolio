@@ -1,6 +1,6 @@
 import React from "react"
 import Socials from "./socials"
-import footer from "../styles/footer.module.css"
+import * as footer from "../styles/footer.module.css"
 
 const Footer = ({style}) => {
   const styles = style || null;

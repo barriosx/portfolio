@@ -1,5 +1,5 @@
 import React from "react"
-import footer from "../styles/footer.module.css"
+import * as footer from "../styles/footer.module.css"
 
 const Socials = () => {
 

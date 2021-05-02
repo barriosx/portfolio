@@ -2,7 +2,7 @@ import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import about from "../styles/about.module.css"
+import * as about from "../styles/about.module.css"
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import Carousel from "../components/carousel";
@@ -22,7 +22,7 @@ const About = () => (
             I am currently a <b>Front End Engineer</b> at <a className="link" href="https://www.coned.com/en">Con Edison</a>.
           </li>
           <li>
-            I work on feature development using Angular 10 and .NET to build PWAs whose interface and interactions meet my user's needs.
+            I work on feature development using <b>Angular 10</b> and <b>.NET</b> to build PWAs whose interface and interactions meet my user's needs.
           </li>
           <li>
             I was born and raised in New York, and I am of Guatemalan and Salvadoran ethnicity <span role="img" aria-label="Guatemala">🇬🇹</span> <span role="img" aria-label="El Salvador">🇸🇻</span>

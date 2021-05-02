@@ -1,5 +1,5 @@
 import React from "react"
-import card from "../styles/card.module.css"
+import * as card from "../styles/card.module.css"
 
 
 const Card = ({title,description,github,demo}) => {

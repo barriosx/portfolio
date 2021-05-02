@@ -1,7 +1,7 @@
 import { Link } from "gatsby"
 // import PropTypes from "prop-types"
 import React from "react"
-import navbar from "../styles/navbar.module.css"
+import * as navbar from "../styles/navbar.module.css"
 
 const Navbar = () => (
   <nav className={navbar.nav}>
