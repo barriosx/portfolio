@@ -6,8 +6,8 @@ import * as navbar from "../styles/navbar.module.css"
 const Navbar = () => (
   <nav className={navbar.nav}>
     <Link to='/'>Home</Link>
-    <Link to='/projects'>Projects</Link>
-    <Link to='/about'>About</Link>
+    <Link to='/projects'>Projects/Work</Link>
+    <Link to='/about'>About Me</Link>
   </nav>
 )
 

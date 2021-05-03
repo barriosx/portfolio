@@ -39,7 +39,7 @@
 }
 .caption {
   position: absolute;
-  background-image: linear-gradient(to top, rgba(11,11,11, 0.85), rgba(0,0,0, 0));
+  background-image: linear-gradient(to top, rgba(11,11,11, 0.95), rgba(0,0,0, 0));
   bottom: 0;
   left: 0;
   right: 0;
@@ -61,7 +61,10 @@
     left: -4rem;
     right: -4rem;
     padding: 1.5rem 4rem; 
-    bottom: -0.75px;
+    bottom: 0px;
+  }
+  .caption p {
+    font-size: 1.5rem ;
   }
 }
 
@@ -84,6 +87,8 @@
     right: -15rem;
     bottom: -0.69px;
     padding: 1.5rem 15rem; 
-
+  }
+  .caption p {
+    font-size: 1.75rem ;
   }
 }
