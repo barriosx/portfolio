@@ -148,6 +148,9 @@ a {
 .link:hover {
   color: #86C232;
 }
+  b {
+    color: #896ce5;
+  }
 @media screen and (max-width: 767px) {
   h1 {
     font-size: 3.5em;

@@ -38,7 +38,7 @@ class Greeting extends Component {
   }
   render() { 
     return ( 
-      <h1>{this.state.timeofDay}, I'm Steven Barrios.</h1>
+      <h1>{this.state.timeofDay}, I'm <b>Steven Barrios</b>.</h1>
      );
   }
 }

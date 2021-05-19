@@ -16,7 +16,7 @@ const Header = () => {
 return (
   <>
     <Greeting />
-    <h3 className={header.subHeader}>I'm a developer <span role="img" aria-label="developer">👨🏻‍💻</span> located in NYC <span role="img" aria-label="nyc">🗽</span>.</h3>
+    <h3 className={header.subHeader}>I'm a <b>developer</b> <span role="img" aria-label="developer">👨🏻‍💻</span> located in <b>NYC</b> <span role="img" aria-label="nyc">🗽</span>.</h3>
     <p className="text">If you need an quick way to get to know me, <a className={header.resumeLink} href={data.file.publicURL} rel="noopener noreferrer" target="_blank">read my resume.</a></p>
   </>
 )
