@@ -6,7 +6,17 @@
   height: 580px;
   transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
 }
-
+.project-header::after {
+  display: block;
+  content: "";
+  height: 0.5rem;
+  width: 65%;
+  left: 0;
+  margin-top: 1.5px;
+  background-color: #86C232;
+  transform: scaleY(1);
+  transition: transform 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
 .project-image {
   position: absolute;
   height: 75%;
@@ -68,8 +78,19 @@
     transform: translateY(-15px);
     cursor: pointer;
   }
+  .project.active:hover {
+    transform: translateY(-15px);
+    cursor: default;
+  }
   .project-image {
       width: 80%;
+  }
+  .projects .project .project-image img {
+    filter: blur(.35rem) grayscale(0.75);
+  }
+  .projects .project.active .project-image img {
+    filter: blur(0) grayscale(0);
+    transition: filter 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
   }
   .project-card {
     position: absolute;
@@ -77,5 +98,6 @@
     left: 40%;
     bottom: 0%;
     max-height: 300px;
+    overflow: hidden;
   }
 }
