@@ -4,7 +4,9 @@
 .project {
   position: relative;
   height: 580px;
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
 }
+
 .project-image {
   position: absolute;
   height: 75%;
@@ -55,12 +57,16 @@
     flex: 3;
   }
   .projects > *:not(:last-child) {
-    margin-right: 5rem;
+    margin-right: 5.5rem;
     margin-bottom: 0rem;
   }
   .project {
     width: 75%;
     margin-bottom: 5rem;
+  }
+  .project:hover {
+    transform: translateY(-15px);
+    cursor: pointer;
   }
   .project-image {
       width: 80%;
@@ -70,5 +76,6 @@
     width: calc(100% - 40%);
     left: 40%;
     bottom: 0%;
+    max-height: 300px;
   }
 }
