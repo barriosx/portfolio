@@ -33,7 +33,14 @@ const Projects = () => {
               <Image imgPath={proj.image_urls.main} /> }
           </div>
           <div className={projects.projectCard}>
-            <Card title={proj.name} description={proj.description} github={proj.github_url} demo={proj.live_url} tech={proj.technologies} />
+            <Card 
+              title={proj.name} 
+              description={proj.description} 
+              github={proj.github_url} 
+              demo={proj.live_url} 
+              tech={proj.technologies} 
+              isActive={activeItems[proj.type] === index}
+            />
           </div>
         </div>
       )
@@ -55,15 +62,15 @@ const Projects = () => {
       <Navbar />
       <Layout>
         <SEO title="Projects" />
-        <h1>Work</h1>
+        <h1 className={projects.projectHeader}>Work</h1>
         {
           mapProjects(work_)
         }
-        <h1>Personal</h1>
+        <h1 className={projects.projectHeader}>Personal</h1>
         {
           mapProjects(personalProjects_)
         }
-        <h1>College</h1>
+        <h1 className={projects.projectHeader}>College</h1>
         {
           mapProjects(collegeProjects_)
         }

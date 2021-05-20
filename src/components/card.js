@@ -2,7 +2,7 @@ import React from "react"
 import * as card from "../styles/card.module.css"
 
 
-const Card = ({title,description,github,demo,tech}) => {
+const Card = ({title,description,github,demo,tech, isActive}) => {
   let demo_link = null;
   let techStack = null;
   if(demo) {
@@ -17,9 +17,9 @@ const Card = ({title,description,github,demo,tech}) => {
   }
 
   return (
-    <div className={card.card}>
+    <div className={`${card.card} ${isActive ? card.active : ''}`}>
       <h2>{title}</h2>
-      <p>{description}</p>
+      <p className="text">{description}</p>
       <div className={card.links}>
         {
           github.length > 0 ? 
