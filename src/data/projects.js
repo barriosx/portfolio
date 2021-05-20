@@ -23,7 +23,7 @@ export default [
 			screenshots: [],
     },
     live_url: 'https://smartcharge-plus.herokuapp.com/',    
-    technologies: ['NodeJS', 'React', 'Puppeteer'],    
+    technologies: ['NodeJS', 'React', 'Puppeteer', 'Heroku'],    
 		theme_color: '#003e89',
   },
   {
@@ -36,7 +36,7 @@ export default [
 			screenshots: [],
     },
     live_url: 'https://capicount.netlify.com/',    
-    technologies: ['React'],    
+    technologies: ['React', 'Netlify'],    
 		theme_color: 'rgba(27, 109, 233, 0.8)',
   },
   {
