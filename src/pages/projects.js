@@ -1,41 +1,71 @@
-import React from "react"
-
+import React, { useState } from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Card from "../components/card"
 import Footer from "../components/footer"
 import Navbar from "../components/navbar"
 import Image from "../components/image"
+import carouselGIF from '../images/carousel.gif'
+import typeaheadGIF from '../images/typeahead.gif'
+import * as image from "../styles/image.module.css"
 import * as projects from "../styles/projects.module.css"
 import projects_data from "../data/projects"
-// import SmartchargeImage from "../components/smartcharge-img"
-// import EzparknImage from "../components/ezparkn-img"
+
 
 const Projects = () => {
-  const projects_ = projects_data.map((project,index) =>{
-    return (
-      <div key={index} className={projects.projects}>
-        <div className={projects.project}>
+  const [activeItems, setActiveItems] = useState({
+    personal: 0,
+    college: 0,
+    work: 0
+  })
+  const gifs =  {
+    "carousel.gif": carouselGIF,
+    "typeahead.gif": typeaheadGIF
+  }
+  const mapProjects = (projectsArr) => {
+    const projectsMapped = projectsArr.map((proj,index) => {
+      return (
+        <div className={`${projects.project} ${activeItems[proj.type] === index ? projects.active : ''}`} key={index} 
+          onClick={() => setActiveItems({...activeItems, [proj.type]: index})}>
           <div className={projects.projectImage}>
-            {/* TODO: Find a way to interpolate the img path so that the img renders for each project. */}
-            {/* kinda works? */}
-            <Image imgPath={project.image_urls.main} />
+            { proj.type === 'work' ?
+              <img src={gifs[proj.image_urls.main]} className={image.gif} /> :
+              <Image imgPath={proj.image_urls.main} /> }
           </div>
           <div className={projects.projectCard}>
-            <Card title={project.name} description={project.description} github={project.github_url} demo={project.live_url} />
+            <Card title={proj.name} description={proj.description} github={proj.github_url} demo={proj.live_url} tech={proj.technologies} />
           </div>
         </div>
+      )
+    });
+    return (
+      <div className={projects.projects}>
+        {
+          projectsMapped
+        }
       </div>
     )
-  });
+  }
+
+  const personalProjects_ = projects_data.filter((project) => project.type === 'personal')
+  const collegeProjects_ = projects_data.filter((project) => project.type === 'college')
+  const work_ = projects_data.filter((project) => project.type === 'work')
   return (
     <>
       <Navbar />
       <Layout>
         <SEO title="Projects" />
-        <h1>Projects</h1>
+        <h1>Work</h1>
         {
-          projects_
+          mapProjects(work_)
+        }
+        <h1>Personal</h1>
+        {
+          mapProjects(personalProjects_)
+        }
+        <h1>College</h1>
+        {
+          mapProjects(collegeProjects_)
         }
       </Layout>
       <Footer />

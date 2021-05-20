@@ -1,33 +1,24 @@
-.projects > *:not(:last-child) {
-  /* margin-bottom: 15rem; */
+.projects {
+  display: flex;
 }
 .project {
   position: relative;
   height: 580px;
-  width: 75%;
-  margin-bottom: 15rem;
 }
 .project-image {
   position: absolute;
   height: 75%;
-  width: 80%;
-  top: 0;
-  left:0;
-}
-.img {
-  height:100%;
-  width:100%;
-  object-fit: cover;
-  object-position: center center;
-}
-.project-card {
-  position: absolute;
-  width: calc(100% - 40%);
-  left: 40%;
-  bottom: 0%;
 }
 
+
 @media screen and (max-width: 767px) {
+  .projects {
+    flex-direction: column;
+  }
+  .projects > *:not(:last-child) {
+    margin-bottom: 5rem;
+    margin-right: 0rem;
+  }
   .project {
     width: 100%;
     margin-bottom: 5rem;
@@ -43,18 +34,41 @@
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-    .project {
-    width: 100%;
+.img {
+  height:100%;
+  width:100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+
+
+
+@media screen and (min-width: 768px) {
+  .projects {
+    flex-direction: row;
+  }
+  .projects > * {
+    flex: 0.5;
+  }
+  .projects .project.active {
+    flex: 3;
+  }
+  .projects > *:not(:last-child) {
+    margin-right: 5rem;
+    margin-bottom: 0rem;
+  }
+  .project {
+    width: 75%;
     margin-bottom: 5rem;
   }
   .project-image {
-    width: 100%;
+      width: 80%;
   }
   .project-card {
     position: absolute;
-    left: 0%;
-    bottom: -1em;
-    width: 100%;
+    width: calc(100% - 40%);
+    left: 40%;
+    bottom: 0%;
   }
 }
