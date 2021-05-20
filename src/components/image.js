@@ -48,20 +48,29 @@ const Image = ({imgPath}) => {
           }
         }
       }
+      portfolioImg: file(relativePath: { eq: "portfolio.png" }) {
+        childImageSharp {
+          fluid(quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
-  if(url === "ezparkn.png") {
-    return <Img fluid={data.ezparknImg.childImageSharp.fluid} className={image.projectImage} />
+  switch (url) {
+    case "ezparkn.png":
+      return <Img fluid={data.ezparknImg.childImageSharp.fluid} className={image.projectImage} />
+    case "smartcharge-plus.png":
+      return <Img fluid={data.smartchargeImg.childImageSharp.fluid} className={image.projectImage} />
+    case "capicount.png":
+      return <Img fluid={data.dominoImg.childImageSharp.fluid} className={image.projectImage} />
+    case "portfolio.png": 
+      return <Img fluid={data.portfolioImg.childImageSharp.fluid} className={image.projectImage} />
+    case "cuny-ehos.jpg":
+    default:
+      return <Img fluid={data.ehosImg.childImageSharp.fluid} className={image.projectImage} />
   }
-  else if(url === "smartcharge-plus.png") {
-    return <Img fluid={data.smartchargeImg.childImageSharp.fluid} className={image.projectImage} />
-  }
-  else if(url === "capicount.png") {
-    return <Img fluid={data.dominoImg.childImageSharp.fluid} className={image.projectImage} />
-  }
-  else {
-    return <Img fluid={data.ehosImg.childImageSharp.fluid} className={image.projectImage} />
-  }
+
 }
 
 export default Image

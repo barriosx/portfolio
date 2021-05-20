@@ -5,7 +5,7 @@ import * as image from "../styles/image.module.css"
 const CarouselImage = ({fluidImg}) =>{
 
   return (
-    <Img fluid={fluidImg} className={image.carousel} />
+    <Img fluid={fluidImg} className={image.projectImage} />
   )
 }
 
