@@ -1,8 +1,11 @@
 .card {
-  background: #292a2b;
+  background: transparent;
   border-radius: 1.5em;
   padding: 3em;
-  box-shadow: -0.25rem 0em 5rem 0.25rem rgba(32,32,32, 0.3);
+}
+.card.active {
+  background: #292a2b;
+  transition: background 0.35s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 .card.active h2 {
   margin-top: 0em;
@@ -39,6 +42,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  padding-top: 1.25rem;
 }
 .card .tech-stack span:not(:last-child) {
   margin-right: 1rem;

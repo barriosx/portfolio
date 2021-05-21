@@ -97,7 +97,8 @@
     width: calc(100% - 40%);
     left: 40%;
     bottom: 0%;
-    max-height: 300px;
+    min-height: 300px;
+    max-height: 325px;
     overflow: hidden;
   }
 }
