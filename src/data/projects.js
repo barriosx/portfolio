@@ -82,7 +82,7 @@ export default [
   {
     name: "Typeahead",
     description: 
-    "Implemented typeahead for searching assets. Optimized to taken in local zip code for efficient searching.",
+    "Implemented typeahead for searching assets. Optimized to use local zip code for refined search results.",
     github_url: '',
     type: 'work',
 		image_urls: {
