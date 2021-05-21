@@ -50,6 +50,10 @@
     bottom: -1em;
     width: 100%;
   }
+  .project-card.offset-tall-card {
+    bottom: -9em;
+    margin-bottom: 2rem;
+  }
 }
 
 .img {

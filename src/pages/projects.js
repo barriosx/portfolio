@@ -32,7 +32,7 @@ const Projects = () => {
               <img src={gifs[proj.image_urls.main]} className={image.gif} /> :
               <Image imgPath={proj.image_urls.main} /> }
           </div>
-          <div className={projects.projectCard}>
+          <div className={`${projects.projectCard}${proj.type === 'work' && index === 0 ? ` ${projects.offsetTallCard}` : ''}`}>
             <Card 
               title={proj.name} 
               description={proj.description} 
