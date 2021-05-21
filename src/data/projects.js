@@ -22,7 +22,7 @@ export default [
 			main: "smartcharge-plus.png",
 			screenshots: [],
     },
-    live_url: 'https://smartcharge-plus.herokuapp.com/',    
+    live_url: '',    
     technologies: ['NodeJS', 'React', 'Puppeteer', 'Heroku'],    
 		theme_color: '#003e89',
   },
