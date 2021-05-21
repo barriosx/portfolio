@@ -27,6 +27,12 @@
   .projects {
     flex-direction: column;
   }
+  .projects > * {
+    flex: auto;
+  }
+  .projects .project.active {
+    flex: auto;
+  }
   .projects > *:not(:last-child) {
     margin-bottom: 5rem;
     margin-right: 0rem;

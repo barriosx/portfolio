@@ -53,3 +53,22 @@
   border: 1px solid #896ce5;
   font-size: 1.25rem;
 }
+
+
+@media screen and (max-width: 767px) {
+  .card {
+    background: #292a2b;
+  }
+  .card .links, .card h2, .card p, .card .links {
+    opacity: 1;
+  }
+  .card .links, .card.active .links {
+    margin-top: 0.25rem;
+  }
+  .card .tech-stack, .card.active .tech-stack {
+    flex-wrap: wrap;
+  }
+  .card .tech-stack span {
+    margin-top: 1rem;
+  }
+}
