@@ -14,7 +14,7 @@
   content: "";
   height: 0.5rem;
   width: 100%;
-  background-color: #86C232;
+  background-color: var(--green);
   transform: scaleY(0);
   transition: transform 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }

@@ -5,7 +5,7 @@
 }
 .card.active {
   background: #292a2b;
-  transition: background 0.35s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  transition: background 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 .card.active h2 {
   margin-top: 0em;
@@ -50,18 +50,18 @@
 .card .tech-stack span {
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
-  border: 1px solid #896ce5;
+  border: 1px solid var(--purple);
   font-size: 1.25rem;
 }
 
 
 @media screen and (max-width: 767px) {
-  .card {
+  /* .card {
     background: #292a2b;
-  }
-  .card .links, .card h2, .card p, .card .links {
+  } */
+  /* .card .links, .card h2, .card p, .card .links {
     opacity: 1;
-  }
+  } */
   .card .links, .card.active .links {
     margin-top: 0.25rem;
   }

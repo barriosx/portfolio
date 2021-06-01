@@ -31,7 +31,7 @@ ul.social li a {
 ul.social li a:hover {
   border: none; 
   box-shadow: none;
-  color: #86C232;
+  color: var(--green);
 }
 .signature {
   margin: 0rem;
