@@ -17,7 +17,15 @@ const Projects = () => {
     personal: 0,
     college: 0,
     work: 0
+  });
+  const [minimizedItems, setMinimizedItems] = useState({
+    personal: -1,
+    college: -1,
+    work: -1
   })
+  const controlCard = (type, index) => {
+    console.log(type,': ',index);
+  }
   const gifs =  {
     "carousel.gif": carouselGIF,
     "typeahead.gif": typeaheadGIF
@@ -32,7 +40,7 @@ const Projects = () => {
               <img src={gifs[proj.image_urls.main]} className={image.gif} /> :
               <Image imgPath={proj.image_urls.main} /> }
           </div>
-          <div className={`${projects.projectCard}${proj.type === 'work' && index === 0 ? ` ${projects.offsetTallCard}` : ''}`}>
+          <div className={`${projects.projectCard}${proj.type === 'work' ? ` ${projects.offsetTallCard}` : ''}`}>
             <Card 
               title={proj.name} 
               description={proj.description} 
@@ -41,6 +49,11 @@ const Projects = () => {
               tech={proj.technologies} 
               isActive={activeItems[proj.type] === index}
             />
+            {/* { 
+              activeItems[proj.type] === index ? 
+              <span className={projects.control} onClick={controlCard(proj.type,index)}></span> :
+              null
+            } */}
           </div>
         </div>
       )

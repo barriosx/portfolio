@@ -15,7 +15,7 @@ export default [
   },
   {
     name: "Smartcharge Plus",
-    description: "Gaining a better understanding of how much charging an EV can cost, while learning about Pupeeteer.",
+    description: "Gained a better understanding of how much charging my EV can cost, while also learning about Pupeeteer.",
 		github_url: 'https://github.com/barriosx/smartcharge-plus',
     type: 'personal',
     image_urls: {
@@ -28,7 +28,7 @@ export default [
   },
   {
     name: "CapiCount",
-    description: "Score tracker for double-six dominoes, quick project to learn about react hooks.",
+    description: "Score tracker for double-six dominoes; a quick project to help me learn about react hooks.",
     github_url: 'https://github.com/barriosx/dominoes-counter',
     type: 'personal',
 		image_urls: {
@@ -68,7 +68,7 @@ export default [
   {
     name: "Camera/Photo UX",
     description: 
-    "Entire experience I built for my customer that allows them to take images of the inside of a manhole.Implemented a carousel for the ability to navigate a batch-like selection of photos, and the ability to tag the photos.",
+    "Experience I built for my customer that allows capturing and tagging images. Implemented a carousel for the ability to navigate between captured photos.",
     github_url: '',
     type: 'work',
 		image_urls: {

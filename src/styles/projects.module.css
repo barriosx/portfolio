@@ -35,30 +35,49 @@
   .projects .project.active {
     flex: 3;
   }
-  .projects > *:not(:last-child) {
-    margin-bottom: 5rem;
-    margin-right: 0rem;
-  }
   .project {
     width: 100%;
-    margin-bottom: 5rem;
+    max-height: 600px;
+    margin-bottom: 2rem;
+  }
+  .projects > *:not(:last-child) {
+    margin-bottom: 2rem;
+    margin-right: 0rem;
   }
   .project-image {
     width: 100%;
     max-height: 225px;
+    position: absolute;
+    border: solid transparent;
+    background-clip: padding-box; 
+    background: var(--black);
+    border-radius: .5rem;
+  }
+  .project-image::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 0.5rem;
+    margin: calc(var(--image-border) * -1);
+    background: linear-gradient(-65deg, var(--green), var(--purple));
+    z-index: -1;
+    transition: margin .35s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+  .projects .project.active .project-image::before {
+    transition: margin .35s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    margin: 0;
   }
   .project-card {
     position: absolute;
-    left: 0%;
-    bottom: -1em;
+    left: calc(var(--image-border) / 2);
+    bottom: 1em;
     width: 100%;
   }
   .project-card.offset-tall-card {
-    bottom: -2em;
-    margin-bottom: 2rem;
+    bottom: 5.5rem;
+    margin-bottom: 0rem;
   }
 }
-
 .img {
   height:100%;
   width:100%;
@@ -117,7 +136,44 @@
     transition: margin .35s cubic-bezier(0.445, 0.05, 0.55, 0.95);
     margin: 0;
   }
-
+  .control {
+    width: 0;
+    height: 0;
+  }
+  .project.active .project-card .control {
+    position: absolute;
+    top: 0.4rem;
+    right: 0.4rem;
+    width: 5rem;
+    height: 2.25rem;
+    background: linear-gradient(-65deg, var(--green) 0%, #6690F2 25%, #B46AFC 60%,var(--purple));
+    border-radius: 1.2em;
+    -webkit-transition: all 0.5s ease 0.4s;
+    transition: all 0.5s ease 0.4s;
+  }
+  .project.active .project-card .control::after {
+    content: '\276F';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    font-weight: 600;
+    font-size: 1.5rem;
+    animation: 0.7s infinite alternate bounce-horizontally;
+  }
+  .project.active .project-card .control::hover::after {
+    cursor: pointer;
+    animation: none;
+  }
+  @keyframes bounce-horizontally {
+    100% {
+      transform: translateX(5px);
+    }
+  }
   .projects .project .project-image img {
     filter: blur(.35rem) grayscale(0.75);
   }
