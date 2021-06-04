@@ -33,7 +33,7 @@
     flex: 1;
   }
   .projects .project.active {
-    flex: 3;
+    flex: 4;
   }
   .project {
     width: 100%;
@@ -93,10 +93,10 @@
     flex-direction: row;
   }
   .projects > * {
-    flex: 0.5;
+    flex: 1;
   }
   .projects .project.active {
-    flex: 3;
+    flex: 4;
   }
   .projects > *:not(:last-child) {
     margin-right: 5.5rem;
