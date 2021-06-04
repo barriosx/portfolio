@@ -30,7 +30,7 @@
     min-height: 100vh;
   }
   .projects > * {
-    flex: 0.5;
+    flex: 1;
   }
   .projects .project.active {
     flex: 3;
