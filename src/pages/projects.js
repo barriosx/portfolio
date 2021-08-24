@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useRef } from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Card from "../components/card"
@@ -11,25 +11,18 @@ import * as image from "../styles/image.module.css"
 import * as projects from "../styles/projects.module.css"
 import projects_data from "../data/projects"
 
-
 const Projects = () => {
   const [activeItems, setActiveItems] = useState({
     personal: 0,
     college: 0,
     work: 0
   });
-  const [minimizedItems, setMinimizedItems] = useState({
-    personal: -1,
-    college: -1,
-    work: -1
-  })
-  const controlCard = (type, index) => {
-    console.log(type,': ',index);
-  }
   const gifs =  {
     "carousel.gif": carouselGIF,
     "typeahead.gif": typeaheadGIF
   }
+
+  // Main helper to take projects and return JSX
   const mapProjects = (projectsArr) => {
     const projectsMapped = projectsArr.map((proj,index) => {
       return (
@@ -49,11 +42,6 @@ const Projects = () => {
               tech={proj.technologies} 
               isActive={activeItems[proj.type] === index}
             />
-            {/* { 
-              activeItems[proj.type] === index ? 
-              <span className={projects.control} onClick={controlCard(proj.type,index)}></span> :
-              null
-            } */}
           </div>
         </div>
       )
@@ -66,7 +54,7 @@ const Projects = () => {
       </div>
     )
   }
-
+  // Create JSX for each section of projects page
   const personalProjects_ = projects_data.filter((project) => project.type === 'personal')
   const collegeProjects_ = projects_data.filter((project) => project.type === 'college')
   const work_ = projects_data.filter((project) => project.type === 'work')
