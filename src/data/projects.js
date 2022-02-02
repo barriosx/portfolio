@@ -68,29 +68,15 @@ export default [
   {
     name: "Camera/Photo UX",
     description: 
-    "Experience I built for my customer that allows capturing and tagging images. Implemented a carousel for the ability to navigate between captured photos.",
+    "Experience I built for my customer that allows capturing and tagging images. Implemented a carousel for the ability to navigate between captured photos. Click on the demo to see an abriged version of it 😊",
     github_url: '',
     type: 'work',
 		image_urls: {
 			main: "carousel.gif",
 			screenshots: [],
     },
-    live_url: '',    
+    live_url: 'https://sleepy-mcnulty-7bfa9d.netlify.app/',    
     technologies: ['Angular 10', 'SCSS'],    
 		theme_color: '#673ab7',
   },
-  {
-    name: "Typeahead",
-    description: 
-    "Implemented typeahead for searching assets. Optimized to use local zip code for refined search results.",
-    github_url: '',
-    type: 'work',
-		image_urls: {
-			main: "typeahead.gif",
-			screenshots: [],
-    },
-    live_url: '',    
-    technologies: ['Angular 10', 'SCSS'],    
-		theme_color: '#673ab7',
-  }
 ]
